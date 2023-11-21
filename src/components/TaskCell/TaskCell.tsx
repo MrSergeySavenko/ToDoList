@@ -1,6 +1,19 @@
 import React from 'react';
-import { SCellWrapper } from './TaskCell.style';
+import { SCellContentWrapper, SCellText, SCellWrapper, SCellX, SCyrcleWrapper } from './TaskCell.style';
 
-export const TaskCell: React.FC = () => {
-    return <SCellWrapper></SCellWrapper>;
+interface IProps {
+    text: string;
+    onClick: () => void;
+}
+
+export const TaskCell: React.FC<IProps> = ({ text, onClick }) => {
+    return (
+        <SCellWrapper onClick={onClick}>
+            <SCyrcleWrapper />
+            <SCellContentWrapper>
+                <SCellText>{text}</SCellText>
+                <SCellX />
+            </SCellContentWrapper>
+        </SCellWrapper>
+    );
 };

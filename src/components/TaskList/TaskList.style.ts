@@ -4,6 +4,7 @@ export const STaskListWrapper = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     marginBottom: '16px',
+    width: '471px',
 }));
 
 export const SListHeader = styled('p')(() => ({
@@ -20,6 +21,19 @@ export const SListHeader = styled('p')(() => ({
 export const SScrollBarWrapper = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
-    height: '280px',
-    overflowY: 'scroll',
+    height: '282px',
+    overflowY: 'auto',
+    width: '100%',
+
+    '&::-webkit-scrollbar': {
+        width: '8px',
+        backgroundColor: '#ced8f1',
+        borderRadius: '100px',
+    },
+
+    '&::-webkit-scrollbar-thumb': {
+        width: '8px',
+        backgroundColor: '#4478ff',
+        borderRadius: '100px',
+    },
 }));
