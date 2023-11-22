@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/index.scss';
-import { MainPage } from './pages/MainPage';
-
 import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom/client';
 
+import './styles/index.scss';
 import { setupStore } from './__data__/store';
+
+import { MainPage } from './pages/MainPage';
 
 const store = setupStore();
 

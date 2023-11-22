@@ -10,16 +10,14 @@ import { SDoneListWrapper, SListHeader, SScrollBarWrapper } from './DoneList.sty
 export const DoneList: React.FC = () => {
     const doneData = useSelector((state: RootState) => state.toDoData.doneData);
 
-    const taskListFormation = () => {
-        return doneData.map((taskText: string, taskIndex: number) => (
-            <TaskCell isDone={true} text={taskText} key={uniqueKey(taskText, taskIndex)} />
-        ));
-    };
-
     return (
         <SDoneListWrapper>
             <SListHeader>Done:</SListHeader>
-            <SScrollBarWrapper>{taskListFormation()}</SScrollBarWrapper>
+            <SScrollBarWrapper>
+                {doneData.map((taskText: string, taskIndex: number) => (
+                    <TaskCell isDone={true} text={taskText} key={uniqueKey(taskText, taskIndex)} />
+                ))}
+            </SScrollBarWrapper>
         </SDoneListWrapper>
     );
 };

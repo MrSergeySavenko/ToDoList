@@ -64,7 +64,7 @@ export const SCellX = styled('image')(() => ({
     display: 'none',
     width: '32px',
     height: '32px',
-    backgroundImage: "url('/Vector.svg')",
+    backgroundImage: "url('/X.svg')",
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
 }));

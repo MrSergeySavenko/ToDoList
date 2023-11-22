@@ -18,21 +18,19 @@ export const TaskList: React.FC = () => {
         dispatch(dataSlice.actions.doneRefill(taskText));
     };
 
-    const taskListFormation = () => {
-        return taskData.map((taskText: string, taskIndex: number) => (
-            <TaskCell
-                isDone={false}
-                text={taskText}
-                key={uniqueKey(taskText, taskIndex)}
-                onClick={() => deleteTask(taskText, taskIndex)}
-            />
-        ));
-    };
-
     return (
         <STaskListWrapper>
             <SListHeader>What to do:</SListHeader>
-            <SScrollBarWrapper>{taskListFormation()}</SScrollBarWrapper>
+            <SScrollBarWrapper>
+                {taskData.map((taskText: string, taskIndex: number) => (
+                    <TaskCell
+                        isDone={false}
+                        text={taskText}
+                        key={uniqueKey(taskText, taskIndex)}
+                        onClick={() => deleteTask(taskText, taskIndex)}
+                    />
+                ))}
+            </SScrollBarWrapper>
         </STaskListWrapper>
     );
 };

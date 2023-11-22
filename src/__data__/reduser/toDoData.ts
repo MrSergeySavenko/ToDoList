@@ -1,4 +1,4 @@
-import { createSlice, Draft, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import { IDataState } from '../models/models';
 
@@ -20,13 +20,13 @@ export const dataSlice = createSlice({
     name: 'toDo',
     initialState: initialState,
     reducers: {
-        taskRefill(state: Draft<IDataState>, action: PayloadAction<string>) {
+        taskRefill(state, action: PayloadAction<string>) {
             return { ...state, taskData: [...state.taskData, action.payload] };
         },
-        reassembledTasks(state: Draft<IDataState>, action: PayloadAction<Array<string>>) {
+        reassembledTasks(state, action: PayloadAction<Array<string>>) {
             return { ...state, taskData: action.payload };
         },
-        doneRefill(state: Draft<IDataState>, action: PayloadAction<string>) {
+        doneRefill(state, action: PayloadAction<string>) {
             return { ...state, doneData: [...state.doneData, action.payload] };
         },
     },
