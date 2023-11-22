@@ -29,6 +29,8 @@ export const STextarea = styled('textarea')(() => ({
     fontStyle: 'normal',
     fontWeight: '400',
     lineHeight: 'normal',
+    outline: 'none',
+    caretColor: '#4478FF',
 
     '&::-webkit-input-placeholder': {
         color: '#000',

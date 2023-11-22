@@ -8,7 +8,6 @@ interface IProp {
 export const SCellWrapper = styled('div')(({ isDone }: IProp) => ({
     cursor: isDone ? 'default' : 'pointer',
     width: '439px',
-    minHeight: '32px',
     padding: '8px',
     borderRadius: '30.887px',
     border: '1px solid #4478FF',
@@ -17,6 +16,8 @@ export const SCellWrapper = styled('div')(({ isDone }: IProp) => ({
     display: 'flex',
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
+    alignContent: 'center',
+    alignItems: 'center',
 
     '&:hover': {
         background: isDone
@@ -33,7 +34,9 @@ export const SCyrcleWrapper = styled('div')(({ isDone }: IProp) => ({
     backgroundImage: isDone ? "url('/CheckedWhite.svg')" : "url('/Unchecked.svg')",
     marginRight: '8px',
     width: '32px',
-    heigth: '32px',
+    height: '32px',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain',
 }));
 
 export const SCellContentWrapper = styled('div')(() => ({
@@ -45,7 +48,7 @@ export const SCellContentWrapper = styled('div')(() => ({
 }));
 
 export const SCellText = styled('p')(({ isDone }: IProp) => ({
-    height: '17px',
+    minHeight: '17px',
     fontFamily: 'Fredoka',
     fontSize: '14px',
     fontStyle: 'normal',
@@ -53,6 +56,8 @@ export const SCellText = styled('p')(({ isDone }: IProp) => ({
     lineHeight: 'normal',
     color: isDone ? '#FFF' : '#000',
     textDecoration: isDone ? 'line-through' : 'none',
+    maxWidth: '360px',
+    wordBreak: 'break-all',
 }));
 
 export const SCellX = styled('image')(() => ({

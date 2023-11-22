@@ -22,7 +22,7 @@ export const SListHeader = styled('p')(() => ({
 export const SScrollBarWrapper = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
+    maxHeight: '284px',
     overflowY: 'auto',
     width: '100%',
     direction: 'rtl',

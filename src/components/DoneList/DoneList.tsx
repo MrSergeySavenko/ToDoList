@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../__data__/store';
+
 import { TaskCell } from '../TaskCell/TaskCell';
+import { RootState } from '../../__data__/store';
 import { uniqueKey } from '../../__data__/utils/utils';
+
 import { SDoneListWrapper, SListHeader, SScrollBarWrapper } from './DoneList.style';
 
 export const DoneList: React.FC = () => {

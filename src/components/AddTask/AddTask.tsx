@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { SAddHeader, SAddWrapper, SBtn, STextarea } from './AddTask.styled';
 import { useDispatch } from 'react-redux';
+
 import { dataSlice } from '../../__data__/reduser';
+
+import { SAddHeader, SAddWrapper, SBtn, STextarea } from './AddTask.styled';
 
 export const AddTask: React.FC = () => {
     const [taskText, setTaskText] = useState('');
@@ -9,8 +11,10 @@ export const AddTask: React.FC = () => {
     const dispatch = useDispatch();
 
     const addTask = () => {
-        dispatch(dataSlice.actions.taskRefill(taskText));
-        setTaskText('');
+        if (taskText) {
+            dispatch(dataSlice.actions.taskRefill(taskText));
+            setTaskText('');
+        }
     };
 
     return (

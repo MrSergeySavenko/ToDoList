@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { SCellContentWrapper, SCellText, SCellWrapper, SCellX, SCyrcleWrapper } from './TaskCell.style';
 
 interface IProps {
