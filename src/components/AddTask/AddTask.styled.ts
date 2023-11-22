@@ -21,7 +21,7 @@ export const STextarea = styled('textarea')(() => ({
     height: '51px',
     padding: '16px',
     borderRadius: '30px',
-    border: '1px solid var(--Blue, #4478FF)',
+    border: '1px solid #4478FF',
     background: '#FFF',
     marginBottom: '16px',
     fontFamily: 'Fredoka',
@@ -40,7 +40,7 @@ export const STextarea = styled('textarea')(() => ({
 export const SBtn = styled('button')(() => ({
     width: '210px',
     borderRadius: '30.887px',
-    background: 'var(--Blue, #4478FF)',
+    background: '#4478FF',
     border: 'none',
     padding: '8px 82px 11px 82px',
     color: '#FFF',
