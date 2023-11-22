@@ -18,7 +18,7 @@ export const TaskList: React.FC = () => {
             if (taskIndex === i) {
                 taskArr.splice(i, 1);
                 dispatch(dataSlice.actions.reassembledTasks(taskArr));
-                console.log('delete');
+                dispatch(dataSlice.actions.doneRefill(taskText));
             }
         });
     };
@@ -26,6 +26,7 @@ export const TaskList: React.FC = () => {
     const taskListFormation = () => {
         return taskData.map((taskText: string, taskIndex: number) => (
             <TaskCell
+                isDone={false}
                 text={taskText}
                 key={uniqueKey(taskText, taskIndex)}
                 onClick={() => deleteTask(taskText, taskIndex)}

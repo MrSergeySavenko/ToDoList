@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
 
-export const STaskListWrapper = styled('div')(() => ({
+export const SDoneListWrapper = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     marginBottom: '16px',
     width: '471px',
-    marginRight: '99px',
 }));
 
 export const SListHeader = styled('p')(() => ({

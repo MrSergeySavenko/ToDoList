@@ -3,16 +3,17 @@ import { SCellContentWrapper, SCellText, SCellWrapper, SCellX, SCyrcleWrapper } 
 
 interface IProps {
     text: string;
-    onClick: () => void;
+    onClick?: () => void;
+    isDone: boolean;
 }
 
-export const TaskCell: React.FC<IProps> = ({ text, onClick }) => {
+export const TaskCell: React.FC<IProps> = ({ text, onClick, isDone }) => {
     return (
-        <SCellWrapper onClick={onClick}>
-            <SCyrcleWrapper />
+        <SCellWrapper onClick={onClick} isDone={isDone}>
+            <SCyrcleWrapper isDone={isDone} />
             <SCellContentWrapper>
-                <SCellText>{text}</SCellText>
-                <SCellX />
+                <SCellText isDone={isDone}>{text}</SCellText>
+                {!isDone && <SCellX />}
             </SCellContentWrapper>
         </SCellWrapper>
     );
